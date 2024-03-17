@@ -1,0 +1,15 @@
+CrmProductInvoiceDataModel
+InventoryItemCode
+ItemDescription
+Stock
+IncreamentUnit
+Quantity
+UnitPrice
+AmountItem
+DiscountRateFull
+DiscountAmount
+TaxRate
+TaxAmount
+TotalAmount
+SAOrder_OrderNo
+Promotion

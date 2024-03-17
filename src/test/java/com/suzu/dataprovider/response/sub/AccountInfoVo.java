@@ -1,0 +1,87 @@
+package com.suzu.dataprovider.response.sub;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode
+public class AccountInfoVo {
+    public int id;
+    public int companyId;
+    public int ssoUserId;
+    public int groupId;
+    public Object firstName;
+    public Object lastName;
+    public String displayName;
+    public String password;
+    public String email;
+    public Object thumbnail;
+    public Object receivedAddress;
+    public Object dob;
+    public Object address;
+    public Object sex;
+    public Object avatarUrl;
+    public int status;
+    public Object introduceYourself;
+    public Object authGg;
+    public int is2fa;
+    public Object link2fa;
+    public Object refCode;
+    public String activeCode;
+    public Object bio;
+    public Object description;
+    public Object accountSpId;
+    public Object urlCustom;
+    public Object tour;
+    public Object personalSite;
+    public Object facebookId;
+    public Object appleId;
+    public Object instagramId;
+    public Object googleId;
+    public Object facebookName;
+    public Object appleName;
+    public Object instagramName;
+    public Object googleName;
+    public String phone;
+    public String countryCode;
+    public int verifyPhoneStatus;
+    public Object facebookToken;
+    public Object stripeCustomerId;
+    public Object xenditCustomerId;
+    public Object lineId;
+    public int accountType;
+    public int dontAsk;
+    public Object twitterId;
+    public int follower;
+    public int following;
+    public int lang;
+    public Object walletAddress;
+    public Object privateKey;
+    public Object publicKey;
+    public boolean becomeArtist;
+    public int artistStatus;
+    public int agreePolicy;
+    public String baseCcy;
+    public int isDeleted;
+    public String createdDate;
+    @EqualsAndHashCode.Exclude
+    public String updateDate;
+    public Object offerId;
+    public Object oid;
+    public Object affiliateId;
+    public Object affId;
+    public int mlmId;
+    public int mlmSponsorId;
+    public String mlmInviteCode;
+    public int mlmType;
+    public boolean conversionFlag;
+    public int evfAffid;
+    public int evfSponsorid;
+    public String source;
+    public boolean followed;
+    public int quantities;
+    public String frontUrl;
+    public Group group;
+    public Object defaultAccount;
+    public Object requestId;
+}

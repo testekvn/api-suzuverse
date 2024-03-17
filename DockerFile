@@ -1,0 +1,29 @@
+# Use an official Maven image as a builder stage
+FROM maven:3.8.6-jdk-11-slim AS builder
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the project files to the container
+COPY . /app
+
+# Run Maven clean and test commands to generate the result folder
+RUN mvn -s m2_setting/settings.xml -Djavax.net.ssl.trustStore=helm-omni/cert/trust.jks  clean package -DskipTests
+
+# Use an official Nginx image as the final stage
+FROM jfrog.vincent.com.vn/omni-channel/nginx:1.17.8-alpine
+
+# Copy the result folder from the builder stage to the Nginx web root
+COPY --from=builder /app/target/result /usr/share/nginx/html
+
+# Expose the default Nginx port (80)
+EXPOSE 80
+
+# Copy the entrypoint script into the container
+COPY entrypoint.sh /entrypoint.sh
+
+# Grant execute permission to the entrypoint script
+RUN chmod +x /entrypoint.sh
+
+# Define the entrypoint script to run Maven tests and start Nginx server
+ENTRYPOINT ["/entrypoint.sh"]

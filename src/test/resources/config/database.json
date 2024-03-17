@@ -1,0 +1,48 @@
+{
+  "driver": {
+    "mysql": {
+      "dialect": "org.hibernate.dialect.MySQL5Dialect",
+      "driverClass": "com.mysql.jdbc.Driver"
+    },
+    "postgres": {
+      "dialect": "org.hibernate.dialect.PostgreSQLDialect",
+      "driverClass": "org.postgresql.Driver"
+    },
+    "oracle": {
+      "dialect": "org.hibernate.dialect.OracleDialect",
+      "driverClass": "oracle.jdbc.driver.OracleDriver"
+    }
+  },
+  "env": {
+    "sit": [
+      {
+        "type": "mysql",
+        "name": "dbxdb",
+        "url": "jdbc:mysql://172.23.11.5:3306/dbtest",
+        "username": "",
+        "password": "",
+        "config": "hibernate/hibernate.conf.xml"
+      }
+    ],
+    "uat": [
+      {
+        "type": "mysql",
+        "name": "dbxdb",
+        "url": "jdbc:mysql://172.23.11.5:3306/dbtest",
+        "username": "",
+        "password": "",
+        "config": "hibernate/hibernate.conf.xml"
+      }
+    ],
+    "prod": [
+      {
+        "type": "mysql",
+        "name": "dbxdb",
+        "url": "jdbc:mysql://172.23.11.5:3306/dbtest",
+        "username": "",
+        "password": "",
+        "config": "hibernate/hibernate.conf.xml"
+      }
+    ]
+  }
+}

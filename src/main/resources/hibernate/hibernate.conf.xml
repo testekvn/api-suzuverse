@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
+        <!--        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
+        <!--        <property name="show_sql">true</property>-->
+        <!--        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>-->
+        <!--        <property name="hibernate.connection.pool_size">10</property>-->
+
+        <!-- List of XML mapping files -->
+        <mapping resource="Categories.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
