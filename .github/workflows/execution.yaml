@@ -10,9 +10,9 @@ name: Execute API Automation
 
 on:
   push:
-    branches: [ "vicent" ]
+    branches: [ "vincent" ]
   pull_request:
-    branches: [ "vicent" ]
+    branches: [ "vincent" ]
 
 jobs:
   build:
